@@ -48,6 +48,9 @@ function Navbar() {
               <Link to="/Contact" className="text-base font-medium text-gray-900 transition-all duration-200 rounded hover:text-opacity-50 focus:ring-1 focus:ring-gray-900 focus:ring-offset-2">
                 Contact us
               </Link>
+              <Link to="/Article" className="text-base font-medium text-gray-900 transition-all duration-200 rounded hover:text-opacity-50 focus:ring-1 focus:ring-gray-900 focus:ring-offset-2">
+              Articl
+              </Link>
             </div>
 
             {/* Search Bar and Profile Picture */}

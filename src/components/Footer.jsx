@@ -40,10 +40,12 @@ function Footer() {
            <Link to="/Contact" className="flex text-base text-black transition-all duration-200 hover:text-purple-600 focus:text-purple-600">  Contact </Link>
           </li>
           <li>
-            <a href="#" title="" className="flex text-base text-black transition-all duration-200 hover:text-purple-600 focus:text-purple-600"> Works </a>
+            <Link to="/Article" className="flex text-base text-black transition-all duration-200 hover:text-purple-600 focus:text-purple-600">
+               Articl
+            </Link>
           </li>
           <li>
-            <a href="#" title="" className="flex text-base text-black transition-all duration-200 hover:text-purple-600 focus:text-purple-600"> Career </a>
+            <a href="#" title="" className="flex text-base text-black transition-all duration-200 hover:text-purple-600 focus:text-purple-600"> Works </a>
           </li>
         </ul>
       </div>

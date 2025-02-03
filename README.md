@@ -9,12 +9,7 @@
 
 The goal of **TickDone** is to simplify task management by providing a seamless experience for organizing, prioritizing, and tracking tasks. The platform is designed to meet the needs of individuals and teams, helping them stay organized and productive in an effortless way.
 
-## 👥 Our Team
-- **Mustafa Obiedat** - Scrum Master (SM)
-- **Ghofran Hijazi** - Product Owner (PO)
-- **Ahmad Al-jabareen** - Quality Assurance (QA)
-- **Hala Abu Shehab** - Team Member
-- **Mohammed Alhmoud** - Team Member
+
 
 ## 🏗 Business Model
 

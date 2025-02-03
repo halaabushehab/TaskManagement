@@ -184,11 +184,11 @@ export default function Dashboard() {
     return (
         <div className="flex h-screen w-full">
             {/* Sidebar */}
-            <aside className="w-1/4 bg-gradient-to-r from-purple-600 to-blue-500 p-6 flex flex-col justify-between shadow-lg">
+            <aside className="w-1/4 bg-gradient-to-r from-purple-700 to-purple-500 p-6 flex flex-col justify-between shadow-lg">
                 <div>
                     <h1 className="mb-8 text-3xl font-extrabold text-white">TickDone</h1>
                     <nav className="space-y-4">
-                        <Link to="/dashboard" className="block px-5 py-3 text-white bg-purple-700 rounded-lg font-medium transition hover:bg-purple-600">Dashboard</Link>
+                        <Link to="/dashboard" className="block px-5 py-3 text-white bg-purple-800 rounded-lg font-medium transition hover:bg-purple-600">Dashboard</Link>
                         <Link to="/tasks/create" className="block px-5 py-3 text-white hover:bg-gray-200 hover:text-gray-800 rounded-lg transition">Task Management</Link>
                         <Link to="/tasks" className="block px-5 py-3 text-white hover:bg-gray-200 hover:text-gray-800 rounded-lg transition">Tasks</Link>
                         <Link to="/Article" className="block px-5 py-3 text-white hover:bg-gray-200 hover:text-gray-800 rounded-lg transition">Articles</Link>
@@ -201,17 +201,17 @@ export default function Dashboard() {
                     <span className="px-2">Log Out</span>
                 </Link>
             </aside>
-
+        
             {/* Main Content */}
             <main className="flex-1 p-6 bg-white">
                 <header className="flex items-center justify-between mb-8">
                     <div className="relative w-1/2">
                         <input
                             type="text"
-                            className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-400"
+                            className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-purple-400"
                             placeholder="Search"
-                            value={searchQuery} // ربط القيمة بحالة البحث
-                            onChange={(e) => setSearchQuery(e.target.value)} // تحديث حالة البحث عند الكتابة
+                            value={searchQuery}
+                            onChange={(e) => setSearchQuery(e.target.value)}
                         />
                         <Search className="absolute right-2 top-2 text-gray-500" />
                     </div>
@@ -220,28 +220,28 @@ export default function Dashboard() {
                         <Link to="/profile"><img src="https://www.w3schools.com/howto/img_avatar.png" className="w-10 h-10 rounded-full border text-gray-500 cursor-pointer hover:text-blue-600 transition"/></Link>
                     </div>
                 </header>
-
-                <section className="mb-8 bg-gradient-to-r from-blue-500 to-white p-6 rounded-lg shadow-lg flex items-center justify-between">
+        
+                <section className="mb-8 bg-gradient-to-r from-purple-600 to-purple-300 p-6 rounded-lg shadow-lg flex items-center justify-between">
                     <div>
                         <h1 className="text-xl font-bold text-white">Welcome, {username}!</h1>
                         <p className="text-gray-200">Keep track of your progress and achieve your goals!</p>
-                        <button className="mt-4 px-4 py-2 bg-purple-700 text-white rounded-lg hover:bg-purple-800">Today's Schedule</button>
+                        <button className="mt-4 px-4 py-2 bg-purple-800 text-white rounded-lg hover:bg-purple-700">Today's Schedule</button>
                     </div>
                     <img src={image} alt="Illustration" className="w-48 h-40 object-cover rounded-lg" />
                 </section>
-
-                {/* عرض المهام الخاصة بالمستخدم */}
+        
+                {/* Task Display */}
                 <section className="grid grid-cols-2 gap-6 mb-8">
                     {filteredTasks.map((task, index) => {
-                        const statusColor = getStatusFill(task.status); // الحصول على نسبة تعبئة الـ line بناءً على الـ status
-                        const priorityColor = getPriorityColor(task.priority); // تحديد لون الـ line بناءً على الأولوية
-
+                        const statusColor = getStatusFill(task.status);
+                        const priorityColor = getPriorityColor(task.priority);
+        
                         return (
                             <Card key={index} className="p-4 transition hover:scale-105 hover:shadow-xl cursor-pointer rounded-lg border-2 border-purple-700 hover:border-purple-500">
                                 <CardHeader 
-    title={task.title} 
-    className="text-xl font-extrabold text-gray-800 mb-2 transition-all transform hover:scale-105 hover:text-purple-700 hover:shadow-lg"
- />
+                                    title={task.title} 
+                                    className="text-xl font-extrabold text-gray-800 mb-2 transition-all transform hover:scale-105 hover:text-purple-700 hover:shadow-lg"
+                                />
                                 <CardContent>
                                     <div className="flex justify-between items-center mb-2">
                                         <span className="text-sm text-gray-500">{task.status}</span>
@@ -250,7 +250,7 @@ export default function Dashboard() {
                                     <div className="w-full bg-gray-200 rounded-full h-2">
                                         <div
                                             className={`h-2 rounded-full ${priorityColor}`}
-                                            style={{ width: `${statusColor}%` }} // تعبئة الـ line بناءً على الـ status
+                                            style={{ width: `${statusColor}%` }}
                                         ></div>
                                     </div>
                                 </CardContent>
